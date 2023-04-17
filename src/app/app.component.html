@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Sorting Counter Game</h1>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (counter)="onCounter($event)">
+        <ng-content>
+        </ng-content>
+      </app-game-control>
+    </div>
+  </div>
+  <hr>
+  <div class="row" [style]="'display: flex'">
+    <div class="col-xs-12">
+      <h2>These are <span class="bold-styling">odd</span> numbers</h2>
+      <app-odd *ngFor="let oddNumber of oddNumbers" [oddNumber]="oddNumber"></app-odd>
+    </div>
+    <div class="col-xs-12">
+      <h2>These are <span class="bold-styling">even</span> numbers</h2>
+      <app-even *ngFor="let evenNumber of evenNumbers" [evenNumber]="evenNumber"></app-even>
+    </div>
+  </div>
+</div>
